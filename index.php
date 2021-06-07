@@ -45,7 +45,7 @@
                 getPhrase(reponse);
             })
 
-            //boutton pour suprimer le prompt
+            //boutton pour suprimer la phrase
             $('#del').click(function(){
                 $('#affiche').empty();
             })
