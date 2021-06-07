@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
     <title>Prompt</title>
 
@@ -35,15 +35,17 @@
 
 
 
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
 
+            //boutton pour activer le prompt
             $('#active').click(function(){
                 reponse = prompt('Merci de taper votre prénom');
                 getPhrase(reponse);
             })
 
+            //boutton pour suprimer le prompt
             $('#del').click(function(){
                 $('#affiche').empty();
             })
@@ -52,6 +54,7 @@
 
         function getPhrase(reponse){
 
+            //affiche la phrase entière
             $.ajax({
                 type: 'post',
                 url: "ajax.php",
